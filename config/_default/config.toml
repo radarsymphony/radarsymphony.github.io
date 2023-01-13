@@ -11,13 +11,13 @@ enableRobotsTXT = true
 
 [params]
   # URL for the avatar on homepage
-  avatarURL = "/static/images/avatar.jpg"
+  avatarURL = "/images/avatar.jpg"
 
   # Choose one of size-xs, size-s, size-m, size-l & size-xl. (Default: size-m)
   avatarSize = "size-l"
 
   # Description to display on homepage
-  description = "A Devops story"
+  description = "A DevOps story"
 
   # Accent color is displayed when you hover over <a> tags
   accentColor = "#fe0002"
