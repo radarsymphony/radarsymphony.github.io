@@ -17,7 +17,7 @@ enableRobotsTXT = true
   avatarSize = "size-l"
 
   # Description to display on homepage
-  description = "A DevOps story"
+  description = "DevOps and Life"
 
   # Accent color is displayed when you hover over <a> tags
   accentColor = "#fe0002"
