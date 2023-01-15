@@ -1,3 +1,3 @@
-## Blog Source Code
+# GitHub Pages Source
 
-coming soon...
+This repo tracks the hugo source code and github workflows associated with https://radarsymphony.github.io/
