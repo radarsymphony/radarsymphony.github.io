@@ -32,7 +32,7 @@ enableRobotsTXT = true
   # If you want to display posts on the homepage, the options are
   # "popular" (order posts by weight), "recent" (order posts by date)
   # or "" (do not display, default option)
-  #showPostsOnHomePage = ""
+  showPostsOnHomePage = "recent"
 
   # Footer text
   footer = "Krypton Code"
@@ -73,9 +73,15 @@ enableRobotsTXT = true
     weight = 2
     
   [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+  [[menu.main]]
     identifier = "github"
     url = "https://github.com/radarsymphony"
-    weight = 3
+    weight = 4
     
     # We use feather-icons: https://feathericons.com/
     pre = "<span data-feather='github'></span>"

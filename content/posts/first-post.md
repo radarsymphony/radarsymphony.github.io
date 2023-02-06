@@ -3,7 +3,8 @@ title: "First Post"
 date: 2023-01-12T16:08:27-08:00
 draft: false
 type: post
-showTableOfContents: true
+showTableOfContents: false
+tags: ["blog"]
 ---
 
 # Welcome
