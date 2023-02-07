@@ -141,7 +141,59 @@ Then, to deploy the site:
 1. Run `git commit -am "[your message about the current changes]"`
 2. Run `git push`
 
-That's it! You should now be able to view your site at `https://github.com/username/username.github.io`.
+That's it! That's all you need for a simple blog site. You should now be able to view your site at `https://github.com/username/username.github.io`. If you'd like to add a custom domain, I will give some pointers in the remaining sections.
+
+# Add Custom Domain
+
+In order to direct a custom domain to your github pages, you will need a few things:
+
+- A custom domain
+- Access to that domain's DNS records (I used cloudflare)
+- Time (updating the DNS records can take some time)
+
+## Configure Github
+
+The first step is to [add a custom domain to the github repository](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site?platform=linux#configuring-a-subdomain) hosting your site. To do that:
+
+1. Navigate to your repo's settings.
+2. Under **Code and automation**, Select **Pages**
+3. Enter your custom domain and click save.
+
+I'd recommend starting with a subdomain like "blog.example.com" or "www.example.com" as not all DNS providers will allow you to direct the apex domain to github pages.
+
+In addition to adding the subdomain to your repository's settings, you want to "verify" your domain. I found [Github's documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages) on how to do this quite clear, so I'd recommend following that guide.
+
+## Configure DNS
+
+1. Login to your DNS provider.
+2. Add a CNAME record that points to [sub].example.com
+3. (optional) Temporarily set low TTL to see changes more quickly as you are setting things up.
+
+## Changes to Site files
+
+In addition to setting things up on Github and with your DNS provider, you need to adjust some files in your repo. 
+
+### CNAME
+
+You need to create a CNAME file that will be served at your project root. Hugo creates your project root dynamically, so we can't add that file directly to `./public`. Instead, 
+
+1. Navigate to your project root.
+2. If you don't have a `./static/` directory, make it `mkdir ./static`
+3. Add a file called `CNAME` (no extension) under `./static/`
+4. Inside that file, add the full custom domain you added to you Github pages settings.
+5. Save.
+
+### config.toml
+
+You will also need to update the base URL for your site. To do so,
+
+1. Open your `config.toml` file (e.g., `./config/_default/config.toml`)
+2. Update any references to your site's URL.
+3. Save.
+
+In Gokarna, you just need to update `baseURL` to equal the custom domain.
+
+Commit your changes and push. Depending on how long your workflow takes and how long your DNS TTL is, you may have to wait a several minutes to see the final result.
 
 # Software Used
 - https://github.com/git/git
@@ -154,3 +206,6 @@ That's it! You should now be able to view your site at `https://github.com/usern
 # Resources
 - https://blog.hellohuigong.com/en/posts/how-to-build-personal-blog-with-github-pages-and-hugo/
 - https://dev.to/importhuman/deploy-hugo-website-using-github-pages-1mc5
+- https://blog.mattdaines.me/p/adding-a-custom-domain-to-your-hugo-site-on-github-pages/
+- https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages
+- https://gohugo.io/hosting-and-deployment/hosting-on-github/#use-a-custom-domain
