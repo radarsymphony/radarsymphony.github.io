@@ -1,5 +1,5 @@
 ---
-title: "Setup Local Https"
+title: "Set up Local Https"
 date: 2023-01-31T07:30:35-08:00
 draft: true
 ---
