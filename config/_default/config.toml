@@ -1,8 +1,8 @@
-baseURL = "https://kryptoncode.com"
+baseURL = "https://knightsdata.com"
 defaultContentLanguage = "en"
 languageCode = "en"
 
-title = "Krypton Code"
+title = "knightsdata"
 
 theme = "gokarna"
 
@@ -14,20 +14,22 @@ enableRobotsTXT = true
   avatarURL = "/images/avatar.jpg"
 
   # Choose one of size-xs, size-s, size-m, size-l & size-xl. (Default: size-m)
-  avatarSize = "size-l"
+  avatarSize = "size-m"
 
   # Description to display on homepage
-  description = "DevOps and Life"
+  description = "On a quest to serve."
 
   # Accent color is displayed when you hover over <a> tags
-  accentColor = "#fe0002"
+  accentColor = "#c40000"
 
   # You can use this to inject any HTML in the <head> tag.
   # Ideal usecase for this is to import custom js/css or add your analytics snippet
-  customHeadHTML = ""
+  customHeadHTML = '''
+    <link rel="stylesheet" href="/css/custom.css">
+  '''
 
   # Keywords relevant for SEO
-  metaKeywords = ["blog", "gokarna", "hugo", "devops", "tech", "documentation"]
+  metaKeywords = ["blog", "gokarna", "hugo", "devops", "tech", "documentation", "sysadmin", "opensource", "howto", "IT", "software" ]
 
   # If you want to display posts on the homepage, the options are
   # "popular" (order posts by weight), "recent" (order posts by date)
@@ -35,7 +37,7 @@ enableRobotsTXT = true
   showPostsOnHomePage = "recent"
 
   # Footer text
-  footer = "Krypton Code"
+  footer = "knightsdata.com"
 
   socialIcons = [
       {name = "github", url = "https://github.com/radarsymphony"},
@@ -61,7 +63,7 @@ enableRobotsTXT = true
     post = ""
 
     # Display name
-    name = "Posts"
+    name = "Blog"
 
     # Weights are used to determine the ordering
     weight = 1
