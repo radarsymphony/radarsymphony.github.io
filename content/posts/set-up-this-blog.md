@@ -140,7 +140,7 @@ Then, to deploy the site:
 1. Run `git commit -am "[your message about the current changes]"`
 2. Run `git push`
 
-That's it! That's all you need for a simple blog site. You should now be able to view your site at `https://github.com/username/username.github.io`. If you'd like to add a custom domain, I will give some pointers in the remaining sections.
+That's it! That's all you need for a simple blog site. You should now be able to view your site at `https://username.github.io`. If you'd like to add a custom domain, I will give some pointers in the remaining sections.
 
 # Add Custom Domain
 

@@ -29,7 +29,7 @@ enableRobotsTXT = true
   '''
 
   # Keywords relevant for SEO
-  metaKeywords = ["blog", "gokarna", "hugo", "devops", "tech", "documentation", "sysadmin", "opensource", "howto", "IT", "software" ]
+  metaKeywords = ["blog", "gokarna", "hugo", "devops", "tech", "documentation", "sysadmin", "opensource", "how-to", "IT", "software" ]
 
   # If you want to display posts on the homepage, the options are
   # "popular" (order posts by weight), "recent" (order posts by date)
