@@ -7,7 +7,7 @@ type: page
 
 Hello! 
 
-My name is Grey. I live on the beautiful west coast of Canada and I'm driven to understand how things work. This site contains documentation for projects I've worked on or technical insights I've had while troubleshooting. 
+My name is Grey. This site contains documentation for projects I've worked on or technical insights I've had while troubleshooting. 
 
-If you want to learn more about me, checkout my [github profile](https://github.com/radarsymphony).
+Learn more about me on [github](https://github.com/radarsymphony).
 
