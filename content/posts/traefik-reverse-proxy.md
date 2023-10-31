@@ -2,7 +2,7 @@
 title: Traefik Reverse Proxy
 date: 2023-10-27T18:38:41-07:00
 type: post
-draft: true
+draft: false
 showTableOfContents: true
 tags:
   - how-to
@@ -13,7 +13,7 @@ tags:
 ---
 # Overview
 The following guide outlines the steps to run [Traefik](https://traefik.io/traefik/) with docker as a reverse proxy for your host. This setup enables you to resolve hostnames to particular containers running on the host. With a public domain, you can use [Traefik to request SSL certificates to enable https](https://doc.traefik.io/traefik/https/acme/) for each site.
-#### Requirements
+#### Prerequisites 
 - Public domain (I use "example.com" throughout, so update these examples with your domain)
 - Docker
 - Docker Compose

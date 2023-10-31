@@ -7,7 +7,7 @@ type: page
 
 Hello! 
 
-My name is Grey. This site contains documentation for projects I've worked on or technical insights I've had while troubleshooting. 
+My name is Grey. This site contains documentation for projects I've worked on or technical insights I've had while troubleshooting. It is my attempt to create the articles I wish I found when I researching how to do something.
 
 Learn more about me on [github](https://github.com/radarsymphony).
 
