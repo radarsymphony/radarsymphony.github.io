@@ -1,6 +1,6 @@
 ---
 title: Local DNS with Bind9
-date: 2023-10-31T10:30:32-07:00
+date: 2023-10-29T10:30:32-07:00
 draft: false
 showTableOfContents: true
 type: post
