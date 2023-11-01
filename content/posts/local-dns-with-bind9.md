@@ -10,6 +10,7 @@ tags:
   - bind9
   - resolver
   - docker
+  - network
 ---
 # Overview
 This short article outlines the steps to set up a local DNS server using [BIND9](https://bind9.net/) and Docker on a Raspberry Pi. This approach enables you to manage your own zone(s) for local services running in a Home Lab. It may also help cache DNS queries to reduce lookup time for frequently requested resources. I've only tested this approach in protected local networks. 
