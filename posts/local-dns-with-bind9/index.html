@@ -7,8 +7,8 @@
 </span></span><span style=display:flex><span>    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>ubuntu/bind9:9.18-22.04_beta</span>
 </span></span><span style=display:flex><span>    <span style=color:#f92672>container_name</span>: <span style=color:#ae81ff>ns-local-example-com</span>
 </span></span><span style=display:flex><span>    <span style=color:#f92672>ports</span>:
-</span></span><span style=display:flex><span>      - <span style=color:#e6db74>&#34;53:53/udp&#34;</span>
-</span></span><span style=display:flex><span>      - <span style=color:#e6db74>&#34;53:53/tcp&#34;</span>
+</span></span><span style=display:flex><span>      - <span style=color:#e6db74>&#34;127.0.0.1:53:53/udp&#34;</span>
+</span></span><span style=display:flex><span>      - <span style=color:#e6db74>&#34;127.0.0.1:53:53/tcp&#34;</span>
 </span></span><span style=display:flex><span>      <span style=color:#75715e># https://bind9.readthedocs.io/en/v9.18.19/manpages.html#std-iscman-rndc</span>
 </span></span><span style=display:flex><span>      - <span style=color:#e6db74>&#34;127.0.0.1:953:953/tcp&#34;</span>
 </span></span><span style=display:flex><span>    <span style=color:#f92672>environment</span>:
