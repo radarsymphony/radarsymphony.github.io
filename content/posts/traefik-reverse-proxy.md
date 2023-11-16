@@ -94,9 +94,11 @@ providers:
     directory: /etc/traefik # mapped in compose.yml
     watch: true
 
-logs: 
-  filePath: /var/log/traefik.log # mapped in compose.yml
-  level: DEBUG
+log: 
+  level: "INFO"
+  filePath: "/var/log/traefik/traefik.log"
+accessLog: 
+  filePath: "/var/log/traefik/access.log"
 
 ```
 ## Docker
@@ -110,7 +112,7 @@ services:
     image: traefik:latest
     container_name: traefik
     security_opt: 
-      - no-new-privileges: true
+      - no-new-privileges=true
     environment:
       - TZ=[YOUR_TIMEZONE]
       # Lookup environment variables for your provider
