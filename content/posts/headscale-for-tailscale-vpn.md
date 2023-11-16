@@ -16,7 +16,7 @@ tags:
 # Overview
 This guide outlines how to set up [Headscale](https://headscale.net/) running as Docker container behind a reverse proxy (Traefik). It uses a free ubuntu VPS from the Oracle Cloud Free Tier, but any linux-based host with public IP and about ~1GB of memory should work for small Home Lab setups. 
 
-Headscale is an opensource reverse-engineered implementation of the closed source Tailscale coordination server. There are many advantages to using the original Tailscale coordination server, such as a feature admin panel and multiple tailnets. However, I am on a quest to explore opensource and privacy-focused software, I've decided to set up Headscale as my Tailscale coordination server. 
+Headscale is an opensource reverse-engineered implementation of the closed source Tailscale coordination server. There are many advantages to using the original Tailscale coordination server, such as a convenient admin panel and multiple tailnets. However, I am on a quest to explore opensource and privacy-focused software, I've decided to set up Headscale as my Tailscale coordination server. 
 
 Setting up Headscale behind a reverse-proxy is not something that the maintainers support or use themselves, but it _is_ a feature that is often [requested by community members](https://github.com/juanfont/headscale/issues/527). I wanted to see if I could identify a way to configure Headscale behind Traefik as a reverse proxy. The following is my working prototype. 
 #### Prerequisites

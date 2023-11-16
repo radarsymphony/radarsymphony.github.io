@@ -32,8 +32,8 @@ services:
     image: ubuntu/bind9:9.18-22.04_beta
     container_name: ns-local-example-com
     ports:
-      - "53:53/udp"
-      - "53:53/tcp"
+      - "127.0.0.1:53:53/udp"
+      - "127.0.0.1:53:53/tcp"
       # https://bind9.readthedocs.io/en/v9.18.19/manpages.html#std-iscman-rndc
       - "127.0.0.1:953:953/tcp"
     environment:
