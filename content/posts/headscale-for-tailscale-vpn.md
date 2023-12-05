@@ -18,12 +18,12 @@ tags:
 
 This guide outlines how to set up Headscale running in a Docker container behind a Traefik reverse proxy. It uses a free Ubuntu VPS from the Oracle Cloud Free Tier, but any linux-based host with a public IP and about ~1GB of memory should work for a personal VPN. 
 
-Setting up Headscale behind a reverse-proxy is not something that the maintainers support or use themselves, but it _is_ a feature that is often [requested by community members](https://github.com/juanfont/headscale/issues/527). I wanted to see if I could identify a way to configure Headscale behind Traefik as a reverse proxy. The following is my working prototype. 
+Setting up Headscale behind a reverse-proxy is not something that the maintainers support or use themselves, but it _is_ a feature that is often [requested by community members](https://github.com/juanfont/headscale/issues/527). I've figured out how to run Headscale behind Traefik. The following is my working prototype. 
 #### Prerequisites
 - Linux VPS with Public IP and ~1GB of memory
-- Traefik running in docker container ([Review this guide](/posts/traefik-reverse-proxy))
 - Public domain
-- [Must read this Headscale documentation](https://github.com/juanfont/headscale/blob/main/docs/reverse-proxy.md)
+- Traefik running in docker container ([Review this guide](/posts/traefik-reverse-proxy))
+- [Headscale documentation on reverse proxies](https://github.com/juanfont/headscale/blob/main/docs/reverse-proxy.md)
 # VPS Setup
 1. Create a free VPS with Oracle Cloud.
 2. Point a hostname to the public IP of your VPS (e.g. `headscale.example.com`).
@@ -126,7 +126,7 @@ randomize_client_port: false
 # Connecting Tailscale Nodes
 This process is fairly straight forward and based on the [Headscale documentation](https://headscale.net/running-headscale-linux/#using-headscale).
 The only caveat is that you need to prefix the `tailscale` commands with `docker exec [tailscale_container]...`
-# Toubleshooting
+# Troubleshooting
 - Headscale makes a [larger debug-focus version of the headscale image](https://headscale.net/running-headscale-container/#debugging-headscale-running-in-docker). This is useful to include more tools within the container to check connections and troubleshoot.
 
 It took me a little bit of testing to arrive at the combination of URL and listening address. In the end, I found that the following worked well. Initially I was trying to use port 443 (which some other tutorials showed) and received errors like `Client sent an HTTP request to an HTTPS server.` 
